@@ -1,0 +1,16 @@
+{
+  "product": [
+    {
+      "title": "",
+      "cost": "",
+      "image": "blob:http://localhost:3001/c9afc0d3-e778-410e-af82-0bc8b3fa8aa5",
+      "id": 1
+    },
+    {
+      "title": "",
+      "cost": "",
+      "image": null,
+      "id": 2
+    }
+  ]
+}
