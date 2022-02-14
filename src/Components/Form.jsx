@@ -1,27 +1,21 @@
 import {useState,useRef} from "react";
 
 export default function Form({onTaskCreate}){
-    const [formData, setFormData] = useState({
-        title: "",
-        cost: "",
-        catagory: "",        
-        image: null
+    const [product,setProduct] = useState({
+        name:"",
+        cost:"",
+        image:  null,
+        catagory:"",
     })
-    const [title,setTitle] = useState("");
-    const [price,setPrice] = useState(0)
-    const [catagory,setCatagory] = useState("")
+   
     const imageRef = useRef(null);
 
-    // const handleChange = (e)=>{
-    //     setProduct(e.target.value)       
-    // }
+ 
     const handleChange = (e) => {
-        let { name, value, type, checked } = e.target;
+        let { name, value } = e.target;
 
-      value = type === "checkbox" ? checked : value;
-
-        setFormData({
-            ...formData,
+      setProduct({
+            ...product,
             [name]: value
         });
     }
@@ -34,7 +28,7 @@ export default function Form({onTaskCreate}){
                 src = URL.createObjectURL(file);
             }
             setProduct({
-                ...formData,
+                ...product,
                 image: src
             });
             return () => {
@@ -43,15 +37,12 @@ export default function Form({onTaskCreate}){
         }
 
         const handleSubmit=(e)=>{
-            if(product.name === "" ){
-                return false
-            }
+            // if(product.name === "" ){
+            //     return false
+            // }
              e.preventDefault();
-            onTaskCreate &&  onTaskCreate(product);
-            setProduct({title:"",
-            cost:"",
-            image:  null,
-            catagory:"", });
+             onTaskCreate &&  onTaskCreate(product);
+           
         }
 
 
@@ -64,8 +55,7 @@ export default function Form({onTaskCreate}){
                     <input type="text"
                     placeholder="Enter your product name"
                     name="name"
-                    value={product.title}
-                    // onChange={(e)=>{setTitle(e.target.value)}}
+                  // value={product.name}
                     onChange={handleChange}
                     />
                 </div>
@@ -73,8 +63,8 @@ export default function Form({onTaskCreate}){
                     <lable>Product Price : </lable>
                     <input type="text"
                     placeholder="Enter your product Price"
-                    name="name"
-                     value={product.price}
+                    name="cost"
+                   //  value={product.cost}
                     // onChange={(e)=>setPrice(e.target.value)}
                     onChange={handleChange}
                     />
@@ -91,7 +81,7 @@ export default function Form({onTaskCreate}){
                 </div>
                 <div>
                     <lable>Product Catagory : </lable>
-                    <select name="department"
+                    <select name="catagory"
                          value={product.catagory}
                         // onChange={(e)=>setCatagory(e.target.value)}
                         onChange={handleChange}

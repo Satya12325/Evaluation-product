@@ -16,7 +16,7 @@ export default function Table({data}){
                     <th>No.</th>
                 <th>Product Name</th>
                 <th>Price</th>
-                <th>Cost</th>
+               
                 <th>Image</th>
                <th>Catagory</th>
                 </tr>
@@ -26,6 +26,7 @@ export default function Table({data}){
                 <td>{item.title}</td>
                 <td>{item.cost}</td>                
                 <td><img width="100px" src={item.image} alt="" /></td>
+                <td>{item.catagory}</td>
                 </tr>
             })}
             </Table>

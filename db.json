@@ -1,16 +1,32 @@
 {
   "product": [
     {
-      "title": "",
-      "cost": "",
-      "image": "blob:http://localhost:3001/c9afc0d3-e778-410e-af82-0bc8b3fa8aa5",
+      "title": "asasd",
+      "cost": "200",
+      "image": "blob:http://localhost:3001/c6681515-f7b7-481a-bde3-f02bdc5a03a0",
+      "catagory": "vegetables",
       "id": 1
     },
     {
-      "title": "",
-      "cost": "",
-      "image": null,
+      "title": "onion",
+      "cost": "40",
+      "image": "blob:http://localhost:3001/00ac33ab-e304-4112-883e-bb890e87bbac",
+      "catagory": "vegetables",
       "id": 2
+    },
+    {
+      "title": "potato",
+      "cost": "20",
+      "image": "blob:http://localhost:3001/4fb57bee-d7d6-4e3a-93b7-6a5de1b90a17",
+      "catagory": "provisions",
+      "id": 3
+    },
+    {
+      "title": "potato",
+      "cost": "20",
+      "image": "blob:http://localhost:3001/ad326ec1-48c8-48af-ba7a-8d15e1d1d58f",
+      "catagory": "provisions",
+      "id": 4
     }
   ]
 }

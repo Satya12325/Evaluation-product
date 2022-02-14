@@ -27,12 +27,12 @@ function App() {
   }, [page])
 
 
-  const handleTask = async ({ title,cost,image,category }) => {
+  const handleTask = async ({ name,cost,image,catagory }) => {
     const payload = {
-      title: title,
+      title: name,
       cost: cost,
       image: image,
-      catagory:category,
+      catagory:catagory,
      
 
     }
